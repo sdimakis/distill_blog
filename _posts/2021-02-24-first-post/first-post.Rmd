@@ -1,0 +1,27 @@
+---
+title: "First post"
+description: |
+  A short description of the post.
+author:
+  - name: Sarah Dimakis
+    url: {}
+date: 02-24-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, dev = "ragg_png")
+```
+
+```{r, message = FALSE}
+library(tidyverse)
+ggplot(mtcars, aes(disp, mpg)) +
+  geom_smooth()+
+  geom_point()+
+  theme(text = element_text(family = "serif"))+
+  labs(title = "a nice plot")
+```
+
